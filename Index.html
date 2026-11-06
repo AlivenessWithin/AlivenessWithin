@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliveness Within</title>
+  
+  <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Faculty+Glyphic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="robots" content="noindex">  
+</head>
+<body>
+  
+  
+  
+  
+  
+  <header>
+    
+    <div>
+      <h1 class="spread">
+        Aliveness Within
+      </h1>
+    </div>
+    <!-- <span class="layer"></span> -->
+    <span class="ginkgo"></span>
+  </header>
+  
+  <header style="background: #fff;">
+    
+    <div>
+      <h1 class="spread">
+        Aliveness Within
+      </h1>
+    </div>
+    <span class="layer"></span>
+    <span class="ginkgo2"></span>
+  </header>
+  
+  
+  <script>
+    
+    document.querySelectorAll('.spread').forEach(el => {
+      el.setAttribute('aria-label', el.textContent);
+      el.innerHTML = [...el.textContent]
+      .map((ch, i) => `<span aria-hidden="true" style="--i:${i}">${ch}</span>`)
+      .join('');
+    });
+    
+  </script>
+  
+</body>
+</html>
