@@ -1,1 +1,36 @@
-Hello world?
+media:
+  input: images
+  output: /images
+
+content:
+  - name: settings
+    label: Site settings
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: title
+        label: Site title
+        type: string
+      - name: tagline
+        label: Tagline
+        type: text
+
+  - name: events
+    label: Events
+    type: collection
+    path: data/events
+    format: json
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: description
+        label: Description
+        type: text
+      - name: image
+        label: Image
+        type: image
